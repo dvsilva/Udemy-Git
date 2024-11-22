@@ -1,0 +1,71 @@
+config
+git config --global user.name "user name"
+git config --global user.email "user.email@domain.com"
+
+git config --global user.name
+git config --global user.email
+git config --global init.defaultBranch master
+
+git config --list
+
+initializing and save file changes
+git init
+git status 
+git add <file>
+git add [. or --all or -A]
+
+git rm --cached <file> - remove from staged (to unstage - after git add)
+git rm --cached -r . - recursive
+
+git commit -m "<message>"
+
+differences
+git diff - changes in files
+git diff [--cached or --staged] - preparation area
+
+logs
+git log - list logs by last
+git log --oneline - get basic infos
+git log -<n> - obtain commits from last numbers
+git log [-p or --patch] - list changes from commits
+git log --stat - list commits and files that changed
+
+alter commit
+git commit --amend -m "<message>" - create new commit based the last
+git commit --amend --no-edit - create new commit based the last without change message
+git commit --amend - open vim to update message (vim - esc + :wq)
+
+alter code editor
+git config --global core.editor "code --wait"
+https://docs.github.com/en/get-started/getting-started-with-git/associating-text-editors-with-git
+
+others
+rm -fr .git/ - remove git and lose changes
+
+use other commits
+git checkout <hash>
+
+rollback changes
+git checkout <file> - rever file to last version (modified files)
+git clean -f - clean files untracked (e.g. renamed files)
+git checkout . && git clean -f - rollback all changes
+
+git rm --cached <file> - rollback after add (if has or not commit before)
+git restore --staged <file> - remove file after add (only works after first commit)
+
+git reset --hard && git clean -f - remove all changes (but mantain new files)
+
+untracked -> git clean -f
+tracked / modified -> git checkout <file> / git reset --hard
+tracked / staged -> git restore --staged <file> or git rm --cached file / git reset --hard
+
+ignore files
+touch .gitignore
+https://github.com/github/gitignore
+
+git update-index --skip-worktree <file> - stop tracking file
+git update-index --no-skip-worktree <file> - start tracking file
+
+clone repo
+git clone gitrepo gitclone - clone local repo
+git clone <url>

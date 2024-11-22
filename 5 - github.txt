@@ -1,0 +1,21 @@
+git remote -v - list remote repo
+git remote add [origin or some name] <url> - add remote repo
+git remote set-url origin <url> - change remote repo
+
+git push - send changes to remote repo
+git pull - get changes from remote
+
+readme
+https://dillinger.io/
+
+ssh keys
+https://github.com/settings/keys
+
+ssh-ketgen - create keys (enter all steps)
+cd ~/.ssh/ -> id_rsa.pub [automatically added] (copy content)
+add key in git hub
+
+with other key file name
+eval $(ssh-agent) - start agent
+ssh-add ~/.ssh/<key-file-name> - add the new key file
+
