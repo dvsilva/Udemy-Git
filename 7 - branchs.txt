@@ -1,0 +1,31 @@
+git branch - list branches
+git branch --list - list branches
+git branch develop - create new branch develop
+
+git checkout develop - get the created branch
+git checkout -b develop - create and get the new branch
+
+git switch develop - change to another branch
+git switch - - alternate the last branch
+git switch -c task-2 - create and get the new branch
+
+git checkout -f develop - undo modifications without commit (with "add" don't consider)
+
+git push --set-upstream origin develop - send to branch remote
+git push -u origin develop - send to branch remote (simple way)
+
+git branch -d task-1 - delete branch local
+git branch -D task-1 - force delete
+git push --delete origin task-1 - delete branch from server
+
+git branch -m task10 - rename branch name
+git branch -m task10 task1 - rename branch name (outside)
+
+rename from remote
+git push --delete origin task-1
+git branch -m task10
+git push --set-upstream origin task10
+
+git log  develop --oneline -5 - see logs from another branch
+
+
