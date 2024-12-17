@@ -1,0 +1,21 @@
+git tag v1 - create lightweight tag v1 (use commit message)
+git tag -a -m "tag criada v2" v2 - create annotated tag v1 (give a message)
+
+git show v2 - details of a tag
+git tag [-l] [--list] - list tags
+git tag -n - list tags with description
+
+git tag v0 <commit_hash> - create lightweight tag from old commit
+git tag -a -m "Versao 0" v0.1 <commit_hash> - create annotated tag from old commit
+
+git push origin v0 - send tag to origin/github (recommended)
+git push origin v0.1 - send another tag to origin/github
+git push --tags - send all tags to origin/github
+
+git checkout v0 - get changes from tags as like a commit
+git diff v0 v1 - compare changes between tags
+
+git tag -d v0.1 - delete tag locally
+git tag -d v2 - delete tag locally
+git push --delete origin v0.1 - delete tag in server
+git push --delete origin v2 - delete tag in server
