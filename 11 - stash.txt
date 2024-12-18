@@ -1,0 +1,13 @@
+git stash - save changes in tracked files not commited
+git stash list - list all saved stashs
+
+git stash apply - apply saved changes (even other branches) - in first position
+git stash apply stash@{1} - apply stash with position 1
+
+git reset --hard - undo changes made by stash
+
+git stash pop - apply and delete stash - in first position
+git stash drop - delete stash - in first position
+git stash drop stash@{0} - delete specific stash
+
+git stash branch feature-1 [stash@{1}] - create branch from stash
