@@ -38,3 +38,9 @@ git reset --hard - reset changes
 
 git pull --rebase - get remote changes, apply remote changes e local commits will be rewritten
 
+recreate branch
+
+git fetch origin develop - get remote branch from remote
+git branch -a - list all branchs local and remote
+git checkout develop - get branch from remote as exsits and last status
+
