@@ -1,0 +1,40 @@
+revert commit
+git revert <hash / HEAD> - revert commit -> create new commit undo changes
+
+undo commit / changes
+git reset --hard [HEAD] - tracked changes local uncommited or not
+git reset --hard HEAD~[n] - revert quantity of commits
+git pull - get commits that have been removed
+
+git commit -a -m "message" - add all files and commit
+git reset --mixed HEAD~1 - revert commit and maintain local changes not committed and put changes in work area
+git commit -a -m "message 2" - add all files and commit
+git reset --soft HEAD~1 - revert commit and maintain local commits and put changes in preparation area
+
+force send changes 
+git push --force - send local changes to remote by force
+git push --force-with-lease - push if no one changes will lost
+
+rebase
+git rebase main - get changes from main to current branch, recreate new commits, alter history of branch
+<don't use rebase in public branches - because of overwrite history>
+git checkout main
+git merge develop
+git push
+
+rebase with conflict
+git rebase main 
+git rebase --abort - cancel rebase
+<solve conflicts>
+git add .
+git rebase --continue - continue after solve conflicts 
+
+git rebase pull - avoid merge commit
+
+git push
+git pull 
+git reset --mixed HEAD~1 - maintain local changes
+git reset --hard - reset changes
+
+git pull --rebase - get remote changes, apply remote changes e local commits will be rewritten
+
