@@ -1,0 +1,15 @@
+alias
+
+git config --global alias.s status - configure alias to git commands git status
+git config --global alias.l log - configure alias to git commands for git log
+git config --global alias.line 'log --oneline' - configure alias to git commands for git log
+
+git config --global --unset alias.s - remove alias
+git config --global --unset alias.l - remove alias
+git config --global --unset alias.line - remove alias
+
+grep
+
+git branch | grep r1 - list branches and filter by r1
+git log --oneline | grep commit - list commits and filter by commit in message
+
