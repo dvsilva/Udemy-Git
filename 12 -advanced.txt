@@ -44,3 +44,40 @@ git fetch origin develop - get remote branch from remote
 git branch -a - list all branchs local and remote
 git checkout develop - get branch from remote as exsits and last status
 
+rebase squash
+
+git rebase --interactive HEAD~3 - do rebase for last 3 commits
+squash - compress/melt
+git diff <last_commit> <other_commit_before> - see diferences
+
+cherry pick
+git checkout main
+git cherry-pick <hash_commit> - bring commit from other branch
+
+git bisect (baiset)
+- find changes in commits
+- use binary search
+
+git bisect start
+git bisect good <hash> - mark commit as good
+git bisect bad <hash> - mark commit as bad
+git bisect reset - stop bisect
+
+git fetch
+
+git fetch - get updates commits, branches and tags
+
+get updates from remote
+git fetch
+git branch -a - list branches including remote
+
+see diferentes local from remote
+git log origin/main --oneline
+git diff origin/main
+
+git checkout origin/main
+git switch -
+git merge 
+
+git pull -> git fetch && git merge
+
